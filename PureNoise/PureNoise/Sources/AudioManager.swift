@@ -30,8 +30,8 @@ final class AudioManager: ObservableObject {
     func play(sound: Sound) {
         stop(resetNowPlaying: false)
 
-        guard let url = Bundle.main.url(forResource: sound.filename, withExtension: "wav", subdirectory: "Sounds") else {
-            print("Missing audio resource: \(sound.filename).wav")
+        guard let url = Bundle.main.url(forResource: sound.filename, withExtension: "mp3", subdirectory: "Sounds") else {
+            print("Missing audio resource: \(sound.filename).mp3")
             return
         }
 
